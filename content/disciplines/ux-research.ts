@@ -1,0 +1,132 @@
+import type { DisciplineConfig } from "@/state/types";
+
+const SOURCE = {
+  filename: "UX UXR Performance Calibration Guide.docx",
+  status: "approved" as const,
+  lastReviewedDate: "2026-10-19",
+  notes:
+    "UX Research level titles are not named in the source document. Generic titles (IC1 Researcher through IC7 Researcher) are used pending content owner confirmation.",
+};
+
+const config: DisciplineConfig = {
+  id: "ux-research",
+  label: "UX Research",
+  status: "approved",
+  source: SOURCE,
+  levels: [
+    {
+      id: "uxr-ic1",
+      discipline: "ux-research",
+      levelCode: "IC1",
+      title: "IC1 Researcher",
+      status: "approved",
+      source: SOURCE,
+      employeeFacing: {
+        scope: { name: "Scope", selfCheckQuestions: ["What assigned research task did I complete within a study, and what part did I own?"] },
+        complexity: { name: "Complexity", selfCheckQuestions: ["What established method or process did I apply to a well-scoped research question?"] },
+        influence: { name: "Influence", selfCheckQuestions: ["How did my assigned work contribute to the study or help the team understand the user question?"] },
+        aiWorkflow: { name: "AI Workflow", selfCheckQuestions: ["What AI tool did I use for my own work this period, and how did I verify the output before using it?"] },
+        exampleOutcome: "Executed an assigned research task to spec and could describe the user outcome it was meant to inform.",
+        selfCheck: "Am I weighing the evidence fairly — giving myself credit for contributing meaningful work within a study, without overstating the scope, complexity, or influence expected at this level?",
+      },
+    },
+    {
+      id: "uxr-ic2",
+      discipline: "ux-research",
+      levelCode: "IC2",
+      title: "IC2 Researcher",
+      status: "approved",
+      source: SOURCE,
+      employeeFacing: {
+        scope: { name: "Scope", selfCheckQuestions: ["What well-defined study did I plan and run mostly independently from intake through synthesis?"] },
+        complexity: { name: "Complexity", selfCheckQuestions: ["How did I choose among established methods for the research question, and which genuinely ambiguous decisions did I escalate?"] },
+        influence: { name: "Influence", selfCheckQuestions: ["What project-team decision did my study inform, confirm, or change?"] },
+        aiWorkflow: { name: "AI Workflow", selfCheckQuestions: ["What repeatable AI-assisted method did I use within the study, how did I verify it, and what did it improve?"] },
+        exampleOutcome: "Ran a complete study end to end and picked the right measure to check whether it answered the question.",
+        selfCheck: "Am I weighing the evidence fairly — recognizing the independence I showed in running the study, while not treating appropriate escalation of ambiguous method choices as a shortfall?",
+      },
+    },
+    {
+      id: "uxr-ic3",
+      discipline: "ux-research",
+      levelCode: "IC3",
+      title: "IC3 Senior Researcher",
+      status: "approved",
+      source: SOURCE,
+      employeeFacing: {
+        scope: { name: "Scope", selfCheckQuestions: ["Within my assigned product area, what research domain or related body of work did I lead across multiple studies, and how did I determine what needed to be learned next?"] },
+        complexity: { name: "Complexity", selfCheckQuestions: ["What non-routine research question required me to weigh methods, data sources, limitations, or confidence, and how did I select a rigorous approach?"] },
+        influence: { name: "Influence", selfCheckQuestions: ["What product decision, hypothesis, metric, or feedback loop did my research shape within my domain, and how did I communicate the evidence and its limitations?"] },
+        aiWorkflow: { name: "AI Workflow", selfCheckQuestions: ["Where did I use AI or synthetic validation to accelerate analysis, synthesis, or preliminary validation, how did I verify the output, and how did I decide whether human research was still needed?"] },
+        exampleOutcome: "Led a connected body of research within a product domain, shaped a consequential product decision or measurable hypothesis, and established how the team would continue learning after the decision.",
+        selfCheck: "Am I weighing the evidence fairly — neither underselling my ownership of a research domain nor overstating impact based only on the number of studies I ran?",
+      },
+    },
+    {
+      id: "uxr-ic4",
+      discipline: "ux-research",
+      levelCode: "IC4",
+      title: "IC4 Principal Researcher",
+      status: "approved",
+      source: SOURCE,
+      employeeFacing: {
+        scope: { name: "Scope", selfCheckQuestions: ["What sustained research program, capability, or cross-product area did I shape, and which teams or domains used the resulting approach?"] },
+        complexity: { name: "Complexity", selfCheckQuestions: ["What ambiguous, high-impact question had no established playbook, and how did I create an evidence strategy that balanced decision risk, rigor, speed, and competing signals?"] },
+        influence: { name: "Influence", selfCheckQuestions: ["What roadmap, research-strategy, or leadership decision changed because of the evidence or framework I introduced, and how did I bring others along?"] },
+        aiWorkflow: { name: "AI Workflow", selfCheckQuestions: ["What AI-augmented research workflow or validation framework did I design, how did it preserve rigor, and what evidence showed that it improved speed, quality, or decision confidence?"] },
+        exampleOutcome: "Created a research approach, framework, or continuous-learning capability that multiple teams used and connected it to a roadmap, customer, or business outcome.",
+        selfCheck: "Am I weighing the evidence fairly — recognizing how I helped a team make decisions in ambiguity, without mistaking a strong study or polished report for higher-level impact?",
+      },
+    },
+    {
+      id: "uxr-ic5",
+      discipline: "ux-research",
+      levelCode: "IC5",
+      title: "IC5 Sr. Principal Researcher",
+      status: "approved",
+      source: SOURCE,
+      employeeFacing: {
+        scope: { name: "Scope", selfCheckQuestions: ["What product-level research strategy did I define, and which researchers or product teams planned their work from it?"] },
+        complexity: { name: "Complexity", selfCheckQuestions: ["What significant product question required me to connect evidence across studies, data sources, or competing perspectives into a coherent direction?"] },
+        influence: { name: "Influence", selfCheckQuestions: ["What changed in how other researchers, Product, or Design teams used evidence because of the guidance, mentoring, or approach I introduced?"] },
+        aiWorkflow: { name: "AI Workflow", selfCheckQuestions: ["What reusable AI-enabled method did I create that other teams adopted, and how do I know they used it?"] },
+        exampleOutcome: "Took on a not-well-understood question, defined the approach others repeatedly used, and shaped the outcome measures the team tracks.",
+        selfCheck: "Am I weighing the evidence fairly — giving credit for the approach, framework, or practice others adopted, without relying on a polished readout alone as proof of impact?",
+      },
+    },
+    {
+      id: "uxr-ic6",
+      discipline: "ux-research",
+      levelCode: "IC6",
+      title: "IC6 Advisory Researcher",
+      status: "approved",
+      source: SOURCE,
+      employeeFacing: {
+        scope: { name: "Scope", selfCheckQuestions: ["What research capability, evidence system, or program did I lead across multiple domains or product teams?"] },
+        complexity: { name: "Complexity", selfCheckQuestions: ["What high-stakes, portfolio-level research problem did I structure with little formal direction, and what competing product or business needs did I reconcile?"] },
+        influence: { name: "Influence", selfCheckQuestions: ["What durable change occurred in how another function gathers, evaluates, or applies evidence because of the practice I established?"] },
+        aiWorkflow: { name: "AI Workflow", selfCheckQuestions: ["What durable AI-enabled capability or platform did I build, who uses it, and what measurable portfolio benefit did it produce?"] },
+        exampleOutcome: "Shifted how a function beyond their own team gathers or applies evidence, and created a learning practice other teams reuse.",
+        selfCheck: "Am I weighing the evidence fairly — looking for durable change across teams or functions, not just broad exposure or participation?",
+      },
+    },
+    {
+      id: "uxr-ic7",
+      discipline: "ux-research",
+      levelCode: "IC7",
+      title: "IC7 Principal Advisory Researcher",
+      status: "approved",
+      source: SOURCE,
+      employeeFacing: {
+        scope: { name: "Scope", selfCheckQuestions: ["What cross-product, portfolio, or business-level research agenda did I help shape with Product leadership?"] },
+        complexity: { name: "Complexity", selfCheckQuestions: ["What ambiguous, cross-cutting business question with no established playbook did I frame and resolve through evidence?"] },
+        influence: { name: "Influence", selfCheckQuestions: ["What prioritization, investment, or business decision changed because of my evidence, and how did I help establish accountability for the resulting outcome?"] },
+        aiWorkflow: { name: "AI Workflow", selfCheckQuestions: ["What AI-native research operating model did I shape across the organization, and what customer, product, or business outcome improved?"] },
+        exampleOutcome: "Changed a prioritization or business decision, and shaped how the org holds itself accountable for outcomes, not just research recommendations.",
+        selfCheck: "Am I weighing the evidence fairly — grounding this level in a specific prioritization, investment, or business decision I shaped, not seniority, visibility, or tenure?",
+      },
+    },
+  ],
+};
+
+export default config;
