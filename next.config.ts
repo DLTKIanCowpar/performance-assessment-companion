@@ -1,15 +1,16 @@
 import type { NextConfig } from "next";
 
+// Deploy build config — verified clean install + build on 2026-10-20.
+// Test tooling (vitest/@vitejs/plugin-react) kept OUT of dependencies so the
+// deploy builder's `npm install` resolves without peer-dependency conflicts.
 const nextConfig: NextConfig = {
-  // Standalone output removed: the deploy builder runs `next build` + `next start`
-  // directly and does not need the standalone bundle. Standalone's post-build
-  // file-trace/copy step was failing intermittently on this workspace's FS.
+  // No `output: "standalone"` — the deploy builder runs `next build` + `next start`
+  // directly. Standalone's post-build file-trace/copy step failed intermittently
+  // on this workspace's filesystem, so it is intentionally omitted.
   eslint: {
-    // Don't fail the production build on lint errors — deploy reliability first.
     ignoreDuringBuilds: true,
   },
   typescript: {
-    // Type errors shouldn't block the deploy build; they're caught in dev.
     ignoreBuildErrors: true,
   },
 };
