@@ -1,0 +1,18 @@
+{
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/builder/page": "app/builder/page.js",
+  "/development/page": "app/development/page.js",
+  "/evidence/page": "app/evidence/page.js",
+  "/export/page": "app/export/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/goal-achievement/page": "app/goal-achievement/page.js",
+  "/impact/page": "app/impact/page.js",
+  "/leadership/page": "app/leadership/page.js",
+  "/overview/page": "app/overview/page.js",
+  "/page": "app/page.js",
+  "/profile/page": "app/profile/page.js",
+  "/review/page": "app/review/page.js",
+  "/role-performance/page": "app/role-performance/page.js",
+  "/values/page": "app/values/page.js"
+}

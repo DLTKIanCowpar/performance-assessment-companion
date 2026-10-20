@@ -1,0 +1,35 @@
+{
+  "status": 200,
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/role-performance/layout,_N_T_/role-performance/page,_N_T_/role-performance"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/role-performance/__PAGE__"
+  ],
+  "prefetchHints": {
+    "hints": 49216,
+    "slots": {
+      "children": {
+        "hints": 49248,
+        "slots": {
+          "children": {
+            "hints": 49312,
+            "slots": null
+          }
+        }
+      }
+    }
+  },
+  "routeCache": {
+    "key": "/route-cache/APP_PAGE/3084206a9cf23ba16221792182bc685a26a5d695139dd798c06450c5174b29dc/$/role-performance",
+    "owner": {
+      "kind": "APP_PAGE",
+      "sourceRoute": "/role-performance/page"
+    },
+    "isFallback": false
+  }
+}

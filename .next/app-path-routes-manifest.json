@@ -1,0 +1,18 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/builder/page": "/builder",
+  "/development/page": "/development",
+  "/evidence/page": "/evidence",
+  "/export/page": "/export",
+  "/favicon.ico/route": "/favicon.ico",
+  "/goal-achievement/page": "/goal-achievement",
+  "/impact/page": "/impact",
+  "/leadership/page": "/leadership",
+  "/overview/page": "/overview",
+  "/page": "/",
+  "/profile/page": "/profile",
+  "/review/page": "/review",
+  "/role-performance/page": "/role-performance",
+  "/values/page": "/values"
+}
